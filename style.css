@@ -6,19 +6,27 @@
     margin: 0 auto;
   }
   .accordeon-title {
+    display: block;
     cursor: pointer;
     text-align: center;
   }
-  .accordeon-title:hover {
-    color:darkviolet;
-  }
   .accordeon-input {
-    appearance: none;
-  }
-  .accordeon-item {
-    border-bottom: 1px solid grey;
-    border-top: 1px solid grey;
-  }
-  .accordeon-image {
     display: none;
   }
+  .accordeon-item {
+    border-bottom: 0.063rem solid grey;
+    border-top: 0.063rem solid grey;
+  }
+ .accordeon-image {
+  display: none;
+ }
+ .accordeon-input:checked ~ .accordeon-image {
+  display: block;
+ }
+ .accordeon-label {
+  display: block;
+  cursor: pointer;
+ }
+.accordeon-label:hover > .accordeon-image {
+  display: block;
+}
