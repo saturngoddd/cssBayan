@@ -31,7 +31,11 @@
     padding-bottom: 1.25rem;
   }
  .accordeon-image {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  scale: 0; 
+  transition: all .3s;
+  -o-transition: all .3s;
  }
  .accordeon-image img {
   display:block;
@@ -39,14 +43,22 @@
   margin: 0 auto;
  }
  .accordeon-input:checked ~ .accordeon-image {
-  display: block;
+  max-height: 80%;
+  overflow: visible;
+  scale: 1;
+  /* opacity: 100%; */
  }
  .accordeon-label {
   display: block;
   cursor: pointer;
  }
 .accordeon-label:hover > .accordeon-image {
-  display: block;
+  max-height: 80%;
+  overflow: visible;
+  scale: 1;
+  /* opacity: 100%; */
+  transition: all .5s;
+  -o-transition: all .5s;
 }
 
 .accordeon-input:checked ~ .wrapper > .accordeon-title   {
@@ -62,16 +74,23 @@
   align-items: center;
 }
 .accordeon-icon.close {
-  display: none;
+ display: none;
+   opacity: 0;
+   transition: all .5s;
+   -o-transition: all .5s;
 }
 .accordeon-input:checked ~ .wrapper > .accordeon-icon.close {
-  display: block;
- }
+display: block;
+opacity: 100%;
+}
  .accordeon-input:checked ~ .wrapper > .accordeon-icon{
   display: none;
  }
  .accordeon-label:hover > .wrapper > .accordeon-icon.close {
   display: block;
+  opacity: 100%;
+  transition: all .5s;
+  -o-transition: all .5s;
 }
 .accordeon-label:hover > .wrapper > .accordeon-icon{
   display: none;
