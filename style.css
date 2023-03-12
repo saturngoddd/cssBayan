@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .accordeon {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+ .title h1 {
+    text-align: center;
+  }
+  .accordeon-title {
+    font-size: 1.263rem;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    color: blue;
+    margin-bottom: 0.938rem;
+    margin-top: 0.938rem;
+    margin-left: 0.938rem;
+  }
+  .accordeon-icon {
+    font-size: 3.75rem;
+    margin-right: 0.938rem;
+    transform: rotate(0);
+    transition: all .5s;
+    -o-transition: all .5s;
+  }
+  .accordeon-input {
+    display: none;
+  }
+  .accordeon-item {
+    border-top: 0.063rem solid grey;
+    max-width: 40.625rem;
+    margin: 0 auto;
+    padding-bottom: 1.25rem;
+  }
+ .accordeon-image {
+  max-height: 0;
+  overflow: hidden;
+  scale: 0;
+  transition: all .3s;
+  -o-transition: all .3s;
+ }
+ .accordeon-image img {
+  display:block;
+  max-width: 70%;
+  margin: 0 auto;
+ }
+ .accordeon-input:checked ~ .accordeon-image {
+  max-height: 80%;
+  overflow: visible;
+  scale: 1;
+  /* opacity: 100%; */
+ }
+ .accordeon-label {
+  display: block;
+  cursor: pointer;
+ }
+.accordeon-input:checked ~ .wrapper > .accordeon-title   {
+  color:black;
+ }
+.wrapper {
+  display: flex;
+  background-color: coral;
+  justify-content: space-between;
+  align-items: center;
+}
+.accordeon-icon.close {
+ display: none;
+   opacity: 0;
+   transition: all .5s;
+   -o-transition: all .5s;
+}
+
+.accordeon-input:checked ~ .wrapper > .accordeon-icon{
+  transform: rotate(135deg);
+ }
+@media (hover: hover) {
+  .accordeon-label:hover > .accordeon-image {
+    max-height: 80%;
+    overflow: visible;
+    scale: 1;
+    /* opacity: 100%; */
+    transition: all .5s;
+    -o-transition: all .5s;
+  }
+  .accordeon:hover > .accordeon-item > .accordeon-label > .wrapper > .accordeon-title  {
+    color: black;
+   }
+   .accordeon-label:hover > .wrapper > .accordeon-icon{
+    transform: rotate(135deg);
+   }
+}
+@media (hover: none) {
+
+}
+@media (max-width:700px) {
+  .accordeon {
+    max-width: 95%;
+    max-height: 100%;
+  }
+  .accordeon-title {
+    font-size: 1.200rem;
+    margin: 0 auto;
+  }
+  .accordeon-icon {
+    display:none;
+  }
+  .accordeon-icon.close {
+    display:none;
+  }
+  .accordeon-input:checked ~ .wrapper > .accordeon-icon.close {
+    display: none;
+   }
+   .wrapper {
+    height: 3.125rem;
+   }
+   .title h1 {
+    font-size: 1.575rem;
+   }
+}
+@media (max-width:520px) {
+  .accordeon {
+    max-width: 95%;
+    max-height: 100%;
+  }
+  .accordeon-title {
+    font-size: 1.0rem;}
+  .accordeon-icon {
+    display:none;
+  }
+  .accordeon-icon.close {
+    display:none;
+  }
+  .accordeon-input:checked ~ .wrapper > .accordeon-icon.close {
+    display: none;
+   }
+   .title h1 {
+    font-size: 1.175rem;
+   }
+}
