@@ -9,12 +9,12 @@
     display: block;
     cursor: pointer;
     text-align: center;
+    color: blue;
   }
   .accordeon-input {
     display: none;
   }
   .accordeon-item {
-    border-bottom: 0.063rem solid grey;
     border-top: 0.063rem solid grey;
   }
  .accordeon-image {
@@ -30,3 +30,10 @@
 .accordeon-label:hover > .accordeon-image {
   display: block;
 }
+
+.accordeon-input:checked ~ .accordeon-title   {
+  color:black;
+ }
+ .accordeon:hover > .accordeon-item > .accordeon-label > .accordeon-title  {
+  color: black;
+ }
