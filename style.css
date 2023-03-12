@@ -20,6 +20,11 @@
  .accordeon-image {
   display: none;
  }
+ .accordeon-image img {
+  display:block;
+  max-width: 50%;
+  margin: 0 auto;
+ }
  .accordeon-input:checked ~ .accordeon-image {
   display: block;
  }
